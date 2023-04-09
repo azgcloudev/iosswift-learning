@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     
     @IBAction func saveTap(_ sender: Any) {
         
+        UserDefaults.standard.set(nameTextField.text!, forKey: "name")
+        UserDefaults.standard.set(birthdayTextField.text!, forKey: "birthday")
+        
         nameLabel.text = "Name: \(nameTextField.text ?? "")"
         birthdayLabel.text = "Birthday: \(birthdayTextField.text ?? "")"
     }
