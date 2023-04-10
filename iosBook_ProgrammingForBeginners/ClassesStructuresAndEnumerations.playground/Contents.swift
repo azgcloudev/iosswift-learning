@@ -170,3 +170,5 @@ enum TrafficLightColor {
 }
 var trafficLightColor = TrafficLightColor.red
 print(trafficLightColor.description())
+trafficLightColor = TrafficLightColor.green
+print(trafficLightColor.description())
