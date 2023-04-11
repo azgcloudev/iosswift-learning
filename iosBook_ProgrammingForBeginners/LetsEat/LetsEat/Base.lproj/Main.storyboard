@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -16,8 +17,20 @@
                     <view key="view" contentMode="scaleToFill" id="OLg-IB-BMs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9z-rV-qes">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Cda-kg-ZI7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M9z-rV-qes" firstAttribute="leading" secondItem="Cda-kg-ZI7" secondAttribute="leading" id="9dr-Wb-dxf"/>
+                            <constraint firstItem="Cda-kg-ZI7" firstAttribute="bottom" secondItem="M9z-rV-qes" secondAttribute="bottom" id="ZjZ-jU-dRt"/>
+                            <constraint firstItem="M9z-rV-qes" firstAttribute="top" secondItem="Cda-kg-ZI7" secondAttribute="top" id="lQf-f5-rtb"/>
+                            <constraint firstItem="Cda-kg-ZI7" firstAttribute="trailing" secondItem="M9z-rV-qes" secondAttribute="trailing" id="mCN-eY-uY8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xxr-nW-jXB"/>
                 </viewController>
