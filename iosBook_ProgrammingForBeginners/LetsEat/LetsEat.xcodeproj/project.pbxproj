@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2DA4F61029E4933E00F355CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA4F60F29E4933E00F355CA /* Assets.xcassets */; };
 		2DA4F61329E4A4EB00F355CA /* ExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4F61229E4A4EB00F355CA /* ExplorerViewController.swift */; };
+		2DA4F61629E5AC9B00F355CA /* RestaurantListControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4F61529E5AC9B00F355CA /* RestaurantListControllerView.swift */; };
 		2DCFC67F29E3DF450083DD4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFC67E29E3DF450083DD4E /* AppDelegate.swift */; };
 		2DCFC68129E3DF450083DD4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFC68029E3DF450083DD4E /* SceneDelegate.swift */; };
 		2DCFC68629E3DF450083DD4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DCFC68429E3DF450083DD4E /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		2DA4F60F29E4933E00F355CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DA4F61229E4A4EB00F355CA /* ExplorerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewController.swift; sourceTree = "<group>"; };
+		2DA4F61529E5AC9B00F355CA /* RestaurantListControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListControllerView.swift; sourceTree = "<group>"; };
 		2DCFC67B29E3DF450083DD4E /* LetsEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCFC67E29E3DF450083DD4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DCFC68029E3DF450083DD4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 			path = Explore;
 			sourceTree = "<group>";
 		};
+		2DA4F61429E5AC2E00F355CA /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4F61529E5AC9B00F355CA /* RestaurantListControllerView.swift */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
 		2DCFC67229E3DF450083DD4E = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		2DCFC67D29E3DF450083DD4E /* LetsEat */ = {
 			isa = PBXGroup;
 			children = (
+				2DA4F61429E5AC2E00F355CA /* Restaurants */,
 				2DA4F61129E4A49600F355CA /* Explore */,
 				2DCFC67E29E3DF450083DD4E /* AppDelegate.swift */,
 				2DCFC68029E3DF450083DD4E /* SceneDelegate.swift */,
@@ -147,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DCFC67F29E3DF450083DD4E /* AppDelegate.swift in Sources */,
+				2DA4F61629E5AC9B00F355CA /* RestaurantListControllerView.swift in Sources */,
 				2DA4F61329E4A4EB00F355CA /* ExplorerViewController.swift in Sources */,
 				2DCFC68129E3DF450083DD4E /* SceneDelegate.swift in Sources */,
 			);
