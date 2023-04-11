@@ -206,8 +206,42 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kA3-L1-hfH">
                                             <rect key="frame" x="0.0" y="0.0" width="177" height="177"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQc-Ef-Ake">
+                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="137"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MYw-0h-1yC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="177" height="137"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="MYw-0h-1yC" firstAttribute="top" secondItem="NQc-Ef-Ake" secondAttribute="top" id="45P-V8-fYK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="MYw-0h-1yC" secondAttribute="trailing" id="kVy-YW-BNY"/>
+                                                        <constraint firstItem="MYw-0h-1yC" firstAttribute="leading" secondItem="NQc-Ef-Ake" secondAttribute="leading" id="o8H-4h-fkS"/>
+                                                        <constraint firstAttribute="bottom" secondItem="MYw-0h-1yC" secondAttribute="bottom" id="ycc-XQ-SvF"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xc-Hs-Nle">
+                                                    <rect key="frame" x="8" y="146" width="161" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Ztm-i3-kF5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="3xc-Hs-Nle" secondAttribute="trailing" constant="8" id="9ud-23-hmp"/>
+                                                <constraint firstItem="NQc-Ef-Ake" firstAttribute="top" secondItem="kA3-L1-hfH" secondAttribute="top" id="FeS-Qd-9WY"/>
+                                                <constraint firstAttribute="trailing" secondItem="NQc-Ef-Ake" secondAttribute="trailing" id="Hdm-4V-ku8"/>
+                                                <constraint firstAttribute="bottom" secondItem="NQc-Ef-Ake" secondAttribute="bottom" constant="40" id="iDC-If-BuW"/>
+                                                <constraint firstItem="3xc-Hs-Nle" firstAttribute="top" secondItem="NQc-Ef-Ake" secondAttribute="bottom" constant="9" id="ofr-iD-gG3"/>
+                                                <constraint firstItem="3xc-Hs-Nle" firstAttribute="leading" secondItem="kA3-L1-hfH" secondAttribute="leading" constant="8" id="p94-yK-rMb"/>
+                                                <constraint firstItem="NQc-Ef-Ake" firstAttribute="leading" secondItem="kA3-L1-hfH" secondAttribute="leading" id="pcg-Ru-WUC"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <segue destination="A7k-Cf-npe" kind="show" id="5vP-qP-0os"/>
                                         </connections>
