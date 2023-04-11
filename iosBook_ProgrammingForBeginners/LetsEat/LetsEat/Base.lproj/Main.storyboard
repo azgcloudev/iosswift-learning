@@ -217,42 +217,69 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MYt-YG-VYx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYt-YG-VYx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3U-Yh-LDO">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3U-Yh-LDO">
                                                     <rect key="frame" x="271" y="50" width="96" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="Cib-sq-pk8"/>
+                                                        <constraint firstAttribute="height" constant="25" id="OV1-4W-bpv"/>
+                                                    </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="btn-location"/>
                                                     <connections>
                                                         <segue destination="ceH-MM-n7F" kind="presentation" id="Hyl-Uc-1cP"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PLEASE SELECT A LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZq-0K-Em8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLEASE SELECT A LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZq-0K-Em8">
                                                     <rect key="frame" x="8" y="24" width="359" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="8tL-EB-eY0"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                     <color key="textColor" name="LetsEat Dark Gray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EXPLORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0k-MF-L7e">
-                                                    <rect key="frame" x="0.0" y="45" width="255" height="37"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPLORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0k-MF-L7e">
+                                                    <rect key="frame" x="8" y="45" width="255" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="Zd6-M3-G8C"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2FE-lH-eic">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2FE-lH-eic">
                                                     <rect key="frame" x="8" y="89" width="359" height="1"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" name="LetsEat Light Gray"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="Y6Q-3b-sbb"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="RZq-0K-Em8" firstAttribute="top" secondItem="MYt-YG-VYx" secondAttribute="top" constant="24" id="1j4-Wm-bCj"/>
+                                                <constraint firstAttribute="height" constant="90" id="CRd-wi-lAV"/>
+                                                <constraint firstItem="b0k-MF-L7e" firstAttribute="leading" secondItem="MYt-YG-VYx" secondAttribute="leading" constant="8" id="YPv-Hh-QtD"/>
+                                                <constraint firstItem="b0k-MF-L7e" firstAttribute="top" secondItem="RZq-0K-Em8" secondAttribute="bottom" id="YbO-pj-y2c"/>
+                                                <constraint firstAttribute="bottom" secondItem="2FE-lH-eic" secondAttribute="bottom" id="ZSd-11-v5e"/>
+                                                <constraint firstItem="i3U-Yh-LDO" firstAttribute="leading" secondItem="b0k-MF-L7e" secondAttribute="trailing" constant="8" id="gvi-CX-psR"/>
+                                                <constraint firstItem="i3U-Yh-LDO" firstAttribute="top" secondItem="RZq-0K-Em8" secondAttribute="bottom" constant="5" id="jzb-hi-ksl"/>
+                                                <constraint firstAttribute="trailing" secondItem="RZq-0K-Em8" secondAttribute="trailing" constant="8" id="s44-d6-347"/>
+                                                <constraint firstAttribute="trailing" secondItem="i3U-Yh-LDO" secondAttribute="trailing" constant="8" id="sDO-xa-efD"/>
+                                                <constraint firstAttribute="trailing" secondItem="2FE-lH-eic" secondAttribute="trailing" constant="8" id="tMm-L9-xnz"/>
+                                                <constraint firstItem="RZq-0K-Em8" firstAttribute="leading" secondItem="MYt-YG-VYx" secondAttribute="leading" constant="8" id="w0e-OF-cPF"/>
+                                                <constraint firstItem="2FE-lH-eic" firstAttribute="leading" secondItem="MYt-YG-VYx" secondAttribute="leading" constant="8" id="xbj-ZJ-q7b"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MYt-YG-VYx" firstAttribute="leading" secondItem="fRH-vd-xSB" secondAttribute="leading" id="4Od-Nq-u2f"/>
+                                        <constraint firstItem="MYt-YG-VYx" firstAttribute="top" secondItem="fRH-vd-xSB" secondAttribute="top" id="eV0-4L-BgX"/>
+                                        <constraint firstAttribute="trailing" secondItem="MYt-YG-VYx" secondAttribute="trailing" id="zi3-eI-Qg5"/>
+                                    </constraints>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="NwM-WX-EDJ" id="htC-EK-qsS"/>
