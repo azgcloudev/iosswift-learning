@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wXw-Pp-gRy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Colors-->
+        <scene sceneID="7fF-tb-lxT">
+            <objects>
+                <viewController id="RGT-6x-IKN" customClass="ColorsTableVC" customModule="RandomColors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UCl-qA-VUc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbk-Nf-s5N">
+                                <rect key="frame" x="169.5" y="430.5" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="temoButtonSegue:" destination="RGT-6x-IKN" eventType="touchUpInside" id="AZW-xz-xAs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3PF-M3-Yte"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="dbk-Nf-s5N" firstAttribute="centerY" secondItem="UCl-qA-VUc" secondAttribute="centerY" id="CEu-bj-iuO"/>
+                            <constraint firstItem="dbk-Nf-s5N" firstAttribute="centerX" secondItem="UCl-qA-VUc" secondAttribute="centerX" id="Zrz-wE-As1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Colors" id="6ke-LT-Kel"/>
+                    <connections>
+                        <segue destination="7os-QL-gv3" kind="show" identifier="toColorsDetailVC" id="lLX-X9-Zsc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPm-jz-NTU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="563.768115942029" y="-32.142857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VNI-3J-2Ld">
+            <objects>
+                <viewController id="7os-QL-gv3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aq6-hG-beI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="240-h1-NJ6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PhK-UO-QX4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Htv-K9-l0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1461" y="-32"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Qa-XU-v6g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wXw-Pp-gRy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="reH-lI-ox9">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RGT-6x-IKN" kind="relationship" relationship="rootViewController" id="Wdr-5T-itw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tvU-MS-6ax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-346.37681159420293" y="-32.142857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
