@@ -1,24 +1,19 @@
 //
-//  ColorsDetailVC.swift
-//  RandomColors
+//  ViewController.swift
+//  Today
 //
 //  Created by Aldair Zamora on 13/4/23.
 //
 
 import UIKit
 
-class ColorsDetailVC: UIViewController {
-    
-    var color: UIColor?
-    
+class ReminderListViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = color ?? .white
-
         // Do any additional setup after loading the view.
     }
-    
 
 
 }
+

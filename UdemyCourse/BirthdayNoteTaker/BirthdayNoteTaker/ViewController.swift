@@ -16,9 +16,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var birthdayLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let storedName = UserDefaults.standard.object(forKey: "name")
+        let storedBirthday = UserDefaults.standard.object(forKey: "birthday")
+        
+        // casting -  as? vs as!
+        // nameLabel.text = storedName as? String
+        // nameLabel.text = storedName as! String // here if the cast fail, the app crash
+            
+        if let myName = storedName as? String {
+            nameLabel.text = myName
+        }
+        
+        if let newBirthday = storedBirthday as? String {
+            birthdayLabel.text = newBirthday
+        }
     }
 
     

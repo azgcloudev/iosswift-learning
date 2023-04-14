@@ -17,8 +17,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="10V-oY-FI0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="colorCell" id="mgO-vl-54m">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mgO-vl-54m" id="i6j-yB-OBv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="RGT-6x-IKN" id="PtT-ju-YDJ"/>
                                     <outlet property="delegate" destination="RGT-6x-IKN" id="jct-IJ-lDb"/>
@@ -28,10 +38,10 @@
                         <viewLayoutGuide key="safeArea" id="3PF-M3-Yte"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="10V-oY-FI0" firstAttribute="top" secondItem="UCl-qA-VUc" secondAttribute="top" id="0Bc-eN-u3y"/>
-                            <constraint firstAttribute="trailing" secondItem="10V-oY-FI0" secondAttribute="trailing" id="8x0-T2-MDa"/>
-                            <constraint firstAttribute="bottom" secondItem="10V-oY-FI0" secondAttribute="bottom" constant="34" id="iVy-Zd-62d"/>
-                            <constraint firstItem="10V-oY-FI0" firstAttribute="leading" secondItem="UCl-qA-VUc" secondAttribute="leading" id="rvx-l2-8bP"/>
+                            <constraint firstItem="10V-oY-FI0" firstAttribute="leading" secondItem="UCl-qA-VUc" secondAttribute="leading" id="1zM-lj-pef"/>
+                            <constraint firstItem="10V-oY-FI0" firstAttribute="top" secondItem="3PF-M3-Yte" secondAttribute="top" id="AgN-sM-ySa"/>
+                            <constraint firstAttribute="bottom" secondItem="10V-oY-FI0" secondAttribute="bottom" id="KYr-4P-rc1"/>
+                            <constraint firstAttribute="trailing" secondItem="10V-oY-FI0" secondAttribute="trailing" id="wPO-BW-dh0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Colors" id="6ke-LT-Kel"/>
@@ -57,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htv-K9-l0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1461" y="-32"/>
+            <point key="canvasLocation" x="1583" y="-32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Qa-XU-v6g">
