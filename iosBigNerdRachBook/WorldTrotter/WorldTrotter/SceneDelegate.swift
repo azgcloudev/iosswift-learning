@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Today
+//  WorldTrotter
 //
-//  Created by Aldair Zamora on 13/4/23.
+//  Created by Aldair Zamora on 18/4/23.
 //
 
 import UIKit
