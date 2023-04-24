@@ -14,7 +14,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("VIew did load")
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("View did appear called function")
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("View will appear called function")
+        nameText.text = ""
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("View will disappear called function")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("View did disappear called function")
+    }
+    
 
     var myName = ""
     

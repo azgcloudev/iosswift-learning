@@ -15,7 +15,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("View 2 did load")
         // load the information in the first load
         nameLabel.text = name
         
