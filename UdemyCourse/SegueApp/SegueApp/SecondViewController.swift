@@ -11,10 +11,14 @@ class SecondViewController: UIViewController {
 
     @IBOutlet var nameLabel: UILabel!
     
+    var name = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // load the information in the first load
+        nameLabel.text = name
+        
     }
 
 }

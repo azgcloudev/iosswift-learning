@@ -22,22 +22,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqI-49-LOc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqI-49-LOc">
                                 <rect key="frame" x="145" y="498" width="100" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to 2nd"/>
                                 <connections>
                                     <segue destination="J0T-PL-0jw" kind="show" id="RYY-Hn-9gN"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jhb-7c-Ypb">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jhb-7c-Ypb">
                                 <rect key="frame" x="16" y="211" width="358" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkS-CJ-vQh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkS-CJ-vQh">
                                 <rect key="frame" x="165" y="273" width="60" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
@@ -50,13 +48,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mkS-CJ-vQh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AHu-a1-dNX"/>
+                            <constraint firstItem="mkS-CJ-vQh" firstAttribute="centerX" secondItem="Jhb-7c-Ypb" secondAttribute="centerX" id="QJF-VJ-rAG"/>
                             <constraint firstItem="eMe-8d-43V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TyY-lR-MWe"/>
+                            <constraint firstItem="mkS-CJ-vQh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="273" id="WZ5-E6-ipl"/>
+                            <constraint firstItem="mkS-CJ-vQh" firstAttribute="centerX" secondItem="PqI-49-LOc" secondAttribute="centerX" id="Xtw-8V-uug"/>
                             <constraint firstItem="eMe-8d-43V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="ZvJ-y7-bo2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PqI-49-LOc" secondAttribute="bottom" constant="277" id="aU5-Ce-ibl"/>
+                            <constraint firstItem="mkS-CJ-vQh" firstAttribute="top" secondItem="Jhb-7c-Ypb" secondAttribute="bottom" constant="28" id="fbo-hv-yVA"/>
+                            <constraint firstItem="Jhb-7c-Ypb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jJO-so-Kjg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wyu-MT-Ma0"/>
                     <connections>
                         <outlet property="nameText" destination="Jhb-7c-Ypb" id="mxp-qX-Zhg"/>
+                        <segue destination="J0T-PL-0jw" kind="show" identifier="toSecondVC" id="ci7-oF-mBv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -120,6 +125,9 @@
             <point key="canvasLocation" x="136.92307692307691" y="3.5545023696682461"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ci7-oF-mBv"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
