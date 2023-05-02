@@ -14,7 +14,19 @@ class ViewController: UIViewController {
     @IBOutlet var passwordText: UITextField!
 
     @IBOutlet var passwordAgainText: UITextField!
+    
+    // creates an alert message with a single button with no actions
+    func makeAlertMessage(title: String, to message: String, buttonText: String) {
+        let emptyUsernameAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
 
+        // creates try again button
+        let tryAgainButton = UIAlertAction(title: buttonText, style: UIAlertAction.Style.default, handler: nil)
+        
+        emptyUsernameAlert.addAction(tryAgainButton)
+        // add the alert to the view
+        self.present(emptyUsernameAlert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,38 +36,19 @@ class ViewController: UIViewController {
     @IBAction func signUpClick(_ sender: Any) {
 
         // display error that username is empty
-        if usernameText.text!.count < 1 {
-
-            let emptyUsernameAlert = UIAlertController(title: "Error", message: "Username is empty", preferredStyle: UIAlertController.Style.alert)
-
-            // creates try again button
-            let tryAgainButton = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default) { UIAlertAction in
-                // clears password fields
-                self.passwordText.text = nil
-                self.passwordAgainText.text = nil
-            }
-
-            emptyUsernameAlert.addAction(tryAgainButton)
-
-            self.present(emptyUsernameAlert, animated: true, completion: nil)
-        }
-
-        // check if passwords matches
-        if !(passwordText.text == passwordAgainText.text) {
-
-            let passwordNotMatchAlert = UIAlertController(title: "Error",
-                message: "Passwords do not match, please retype type the same password",
-                preferredStyle: UIAlertController.Style.alert)
-
-            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
-                UIAlertAction in
-                // deletes de password again entry
-                self.passwordAgainText.text = nil
-            }
-
-            passwordNotMatchAlert.addAction(okButton)
-
-            self.present(passwordNotMatchAlert, animated: true, completion: nil)
+        if usernameText.text == "" {
+            
+            makeAlertMessage(title: "Error", to: "Username is empty", buttonText: "Try again")
+            
+        } else if passwordText.text == "" {
+            makeAlertMessage(title: "Error", to: "Password is empty", buttonText: "Try again")
+            
+        } else if passwordText.text != passwordAgainText.text {
+            makeAlertMessage(title: "Error", to: "Passwords do not match", buttonText: "Try again")
+            
+        } else {
+            makeAlertMessage(title: "Success", to: "User created", buttonText: "Ok")
+            
         }
 
 //          EXPLANATION OF HOW TO CREATE ALERT AND ALERT ACTION BUTTONS
