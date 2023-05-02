@@ -43,3 +43,73 @@ var number2: UInt32 = 2000000
 let minInt = Int.min
 let maxInt = Int.max
 
+
+
+
+//// ==> FLOATING POINT NUMBERS <===
+// represents signed numbers with decimals
+// Doubles: 64 bits; Float: 32 bits
+// double at least 15 decimal digits
+// float at least 6 decimal digits
+
+let float1: Float = 3.14159
+
+let double1: Double = 3.1415912345378
+
+
+
+
+//// ==> NUMERIC LITERALS <===
+
+// decimals with no prefix
+// binary with 0b prefix
+// octal with 0o prefix
+// hexadecimal with 0x prefix
+let decimalNumber = 17
+let binaryNumber = 0b10001
+let octalNumber = 0o21
+let hexadecimalNumber = 0x11
+
+
+
+
+//// ==> TYPEALIAS <==
+// define an alternative name for an existing type
+typealias IpSample = UInt8
+print(IpSample.max)
+print(IpSample.min)
+
+
+//// ==> BOOLEANS <==
+// true or false
+let isTheCarOn = true
+let isSnowing = false
+let isMaintenanceNeeded: Bool // declare the constant with no value, hence type annotation is needed
+
+
+
+
+
+//// ==> TUPLES <==
+// group of multiple values in a single compound
+// can have multiple types
+let http404Error = (404, "Not Found") // let http404Error: (Int, String)
+
+// tuples can be decompose and assign their values to variables
+let (statusCode, statusMessage) = http404Error
+print(statusCode)
+print(statusMessage)
+
+// values can be ignored with an underscore
+let (statusCode1, _) = http404Error
+
+// tuples can be access by ther index number position
+print("The status code is \(http404Error.0)")
+print("The message is \(http404Error.1)")
+
+// naming elements in the tuple
+let http202Status = (statusCode: 200, description: "OK")
+
+// access the values with the descriptive names
+print("The status code is \(http202Status.statusCode)")
+print("The message is \(http202Status.description)")
