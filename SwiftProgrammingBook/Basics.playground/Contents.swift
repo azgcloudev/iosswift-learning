@@ -113,3 +113,47 @@ let http202Status = (statusCode: 200, description: "OK")
 // access the values with the descriptive names
 print("The status code is \(http202Status.statusCode)")
 print("The message is \(http202Status.description)")
+
+
+
+
+//// ==> OPTIONALS <==
+
+let possibleNumber = "12a"
+let convertedNumber = Int(possibleNumber) // type is Int? - if cannot be converted nil is returned
+print(convertedNumber)
+
+
+var serverResponseCode: Int? = 404
+//if the const or var is not optional it cannot be assigned to nil
+serverResponseCode = nil
+
+// if an optional is defined without a value, nil is assigned to it
+var surveyAnswer: String?
+print(surveyAnswer)
+
+
+//// ==> IF STATEMENTS AND FORCE UNWRAPPING <==
+// force unwrap tells that i am sure that the optional is not nil
+if convertedNumber != nil {
+    print("convertedNumber has an integer value of \(convertedNumber!)") // force unwrap
+}
+
+
+//// ==> OPTIONAL BINDING <==
+// use to check if the optional has a value using a temporary variable or constant
+// can be use with if or while
+if let actualNumber = Int(possibleNumber) {
+    // if it has a value
+    print("The string \(possibleNumber) has an integer value of \(actualNumber)")
+} else {
+    // if actualNumber is nil
+    print("String \(possibleNumber) couldn't be converted to integer")
+}
+
+
+
+
+
+//// ==> ERROR HANDLING <==
+
