@@ -12,7 +12,7 @@ let result2 = result - secondScore
 // multiplication
 let result3 = result2 * firstScore
 
-// devision
+// division
 let result4 = result3 / result2
 
 
