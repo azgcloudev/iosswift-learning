@@ -13,6 +13,7 @@
 		2DDC92272A224E02004AF2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC92252A224E02004AF2CB /* Main.storyboard */; };
 		2DDC92292A224E03004AF2CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC92282A224E03004AF2CB /* Assets.xcassets */; };
 		2DDC922C2A224E03004AF2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDC922A2A224E03004AF2CB /* LaunchScreen.storyboard */; };
+		2DDC92342A227489004AF2CB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC92332A227489004AF2CB /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2DDC92282A224E03004AF2CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DDC922B2A224E03004AF2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DDC922D2A224E03004AF2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DDC92332A227489004AF2CB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				2DDC921F2A224E02004AF2CB /* AppDelegate.swift */,
 				2DDC92212A224E02004AF2CB /* SceneDelegate.swift */,
 				2DDC92232A224E02004AF2CB /* CardSelectionVC.swift */,
+				2DDC92332A227489004AF2CB /* Card.swift */,
 				2DDC92252A224E02004AF2CB /* Main.storyboard */,
 				2DDC92282A224E03004AF2CB /* Assets.xcassets */,
 				2DDC922A2A224E03004AF2CB /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				2DDC92242A224E02004AF2CB /* CardSelectionVC.swift in Sources */,
 				2DDC92202A224E02004AF2CB /* AppDelegate.swift in Sources */,
 				2DDC92222A224E02004AF2CB /* SceneDelegate.swift in Sources */,
+				2DDC92342A227489004AF2CB /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
