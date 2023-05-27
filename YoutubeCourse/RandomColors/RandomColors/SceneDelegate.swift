@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  RandomColors
 //
-//  Created by Aldair Zamora on 13/4/23.
+//  Created by Aldair Zamora on 27/5/23.
 //
 
 import UIKit

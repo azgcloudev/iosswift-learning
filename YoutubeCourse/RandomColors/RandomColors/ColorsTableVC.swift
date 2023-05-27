@@ -2,74 +2,65 @@
 //  ColorsTableVC.swift
 //  RandomColors
 //
-//  Created by Aldair Zamora on 13/4/23.
+//  Created by Aldair Zamora on 27/5/23.
 //
 
 import UIKit
 
 class ColorsTableVC: UIViewController {
-    
+
     var colors: [UIColor] = []
-
-
+    
+    enum Cells {
+        static let colorCell = "ColorCell"
+        
+    }
+    
+    enum Segues {
+        static let toDetail = "ToColorsDetailVC"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        addRandomColors()
-
+        
         // Do any additional setup after loading the view.
+        addRandomColors()
     }
-
 
     func addRandomColors() {
         for _ in 0..<50 {
-            colors.append(createRandomColor())
+            colors.append(UIColor.random())
         }
     }
     
     
-    func createRandomColor() -> UIColor {
-        
-        let randomColor = UIColor(red: CGFloat.random(in: 0...1),
-                                  green: CGFloat.random(in: 0...1),
-                                  blue: CGFloat.random(in: 0...1),
-                                  alpha: 1)
-        
-        return randomColor
-    }
-    
+    // function is use to send the color to another VC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destVC = segue.destination as! ColorsDetailVC
         destVC.color = sender as? UIColor
     }
+
 }
 
-
-// table view
 extension ColorsTableVC: UITableViewDelegate, UITableViewDataSource {
-    
+
+    // how many rows to show
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return colors.count
     }
-    
+
+    // what to show in the cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell") else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cells.colorCell) else {
             return UITableViewCell()
         }
-        
         let color = colors[indexPath.row]
-        
-        tableView.backgroundColor = color
         cell.backgroundColor = color
-        
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let color = colors[indexPath.row]
-        performSegue(withIdentifier: "toColorsDetailVC", sender: color)
+        performSegue(withIdentifier: Segues.toDetail, sender: color)
     }
-    
 }
