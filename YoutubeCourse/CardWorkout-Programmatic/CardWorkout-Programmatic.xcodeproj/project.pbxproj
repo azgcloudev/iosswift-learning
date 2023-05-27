@@ -12,6 +12,8 @@
 		2DF519402A22A30000559A24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF5193F2A22A30000559A24 /* Assets.xcassets */; };
 		2DF519432A22A30000559A24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF519412A22A30000559A24 /* LaunchScreen.storyboard */; };
 		2DF5194B2A22A51400559A24 /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF5194A2A22A51400559A24 /* CardSelectionVC.swift */; };
+		2DF5194D2A22A7EB00559A24 /* CWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF5194C2A22A7EB00559A24 /* CWButton.swift */; };
+		2DF5194F2A22AFFB00559A24 /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF5194E2A22AFFB00559A24 /* RulesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2DF519422A22A30000559A24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DF519442A22A30000559A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DF5194A2A22A51400559A24 /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
+		2DF5194C2A22A7EB00559A24 /* CWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWButton.swift; sourceTree = "<group>"; };
+		2DF5194E2A22AFFB00559A24 /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				2DF519362A22A2FF00559A24 /* AppDelegate.swift */,
 				2DF519382A22A2FF00559A24 /* SceneDelegate.swift */,
 				2DF5194A2A22A51400559A24 /* CardSelectionVC.swift */,
+				2DF5194E2A22AFFB00559A24 /* RulesVC.swift */,
+				2DF5194C2A22A7EB00559A24 /* CWButton.swift */,
 				2DF5193F2A22A30000559A24 /* Assets.xcassets */,
 				2DF519412A22A30000559A24 /* LaunchScreen.storyboard */,
 				2DF519442A22A30000559A24 /* Info.plist */,
@@ -135,8 +141,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF519372A22A2FF00559A24 /* AppDelegate.swift in Sources */,
+				2DF5194F2A22AFFB00559A24 /* RulesVC.swift in Sources */,
 				2DF519392A22A2FF00559A24 /* SceneDelegate.swift in Sources */,
 				2DF5194B2A22A51400559A24 /* CardSelectionVC.swift in Sources */,
+				2DF5194D2A22A7EB00559A24 /* CWButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
