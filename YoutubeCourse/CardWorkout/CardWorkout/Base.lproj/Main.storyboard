@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -106,8 +106,41 @@
                     <view key="view" contentMode="scaleToFill" id="kib-CC-sa3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8l-Hz-wK5">
+                                <rect key="frame" x="30" y="137" width="354" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value of each card represent the number of execise you do.  J =11, Q = 12, k = 13" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7A-dp-KhA">
+                                <rect key="frame" x="30" y="210" width="354" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="♠️ = Push-up  ❤️ = Sit-up  ♣️ = Burpees  ♦️ = Jumping Jacks" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FS-gH-vDn">
+                                <rect key="frame" x="107" y="366.5" width="200" height="175.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="C8N-Q6-oIF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GhP-Fy-TO5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j8l-Hz-wK5" firstAttribute="top" secondItem="GhP-Fy-TO5" secondAttribute="top" constant="137" id="4D4-vL-251"/>
+                            <constraint firstItem="GhP-Fy-TO5" firstAttribute="trailing" secondItem="d7A-dp-KhA" secondAttribute="trailing" constant="30" id="D3G-5o-nlw"/>
+                            <constraint firstItem="5FS-gH-vDn" firstAttribute="centerX" secondItem="kib-CC-sa3" secondAttribute="centerX" id="JMM-od-vha"/>
+                            <constraint firstItem="d7A-dp-KhA" firstAttribute="top" secondItem="j8l-Hz-wK5" secondAttribute="bottom" constant="25" id="Z5Y-a2-EA9"/>
+                            <constraint firstItem="GhP-Fy-TO5" firstAttribute="trailing" secondItem="j8l-Hz-wK5" secondAttribute="trailing" constant="30" id="fNR-S5-fG5"/>
+                            <constraint firstItem="j8l-Hz-wK5" firstAttribute="leading" secondItem="GhP-Fy-TO5" secondAttribute="leading" constant="30" id="j54-fh-5zk"/>
+                            <constraint firstItem="d7A-dp-KhA" firstAttribute="leading" secondItem="GhP-Fy-TO5" secondAttribute="leading" constant="30" id="oZV-JR-tDV"/>
+                            <constraint firstItem="5FS-gH-vDn" firstAttribute="top" secondItem="d7A-dp-KhA" secondAttribute="bottom" constant="75" id="unc-6l-tCx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hNy-Ng-D2o"/>
                 </viewController>
