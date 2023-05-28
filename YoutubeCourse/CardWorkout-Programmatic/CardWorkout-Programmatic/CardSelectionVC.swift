@@ -9,15 +9,47 @@ import UIKit
 
 class CardSelectionVC: UIViewController {
 
-    let cardImageView = UIImageView()
-    let stopButton = CWButton(backgroundColor: .systemRed, title: "Stop")
-    let restartButton = CWButton(backgroundColor: .systemGreen, title: "Reset")
-    let rulesButton = CWButton(backgroundColor: .systemBlue, title: "Rules")
+    let cardImageView   = UIImageView()
+    let stopButton      = CWButton(backgroundColor: .systemRed, title: "Stop")
+    let restartButton   = CWButton(backgroundColor: .systemGreen, title: "Reset")
+    let rulesButton     = CWButton(backgroundColor: .systemBlue, title: "Rules")
+    
+    var timer           = Timer()
+    
+    var cards:[UIImage] = Card.allValues
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureUI()
+        startTimer()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        timer.invalidate()
+    }
+    
+    @objc func presentRulesVC() {
+        present(RulesVC(), animated: true)
+    }
+    
+    @objc func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(showRandomImage), userInfo: nil, repeats: true)
+    }
+    
+    @objc func showRandomImage() {
+        cardImageView.image = cards.randomElement() ?? UIImage(named: "AS")
+    }
+    
+    @objc func stopTimer() {
+        timer.invalidate()
+    }
+    
+    @objc func resetTimer() {
+        stopTimer()
+        startTimer()
     }
     
     func configureUI() {
@@ -51,6 +83,8 @@ class CardSelectionVC: UIViewController {
             stopButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stopButton.topAnchor.constraint(equalTo: cardImageView.bottomAnchor, constant: 30)
         ])
+        
+        stopButton.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
     }
     
     func configureRestartButton() {
@@ -62,6 +96,8 @@ class CardSelectionVC: UIViewController {
             restartButton.leadingAnchor.constraint(equalTo: stopButton.leadingAnchor),
             restartButton.topAnchor.constraint(equalTo: stopButton.bottomAnchor, constant: 20)
         ])
+        
+        restartButton.addTarget(self, action: #selector(resetTimer), for: .touchUpInside)
     }
     
     func configureRulesButton() {
@@ -78,7 +114,6 @@ class CardSelectionVC: UIViewController {
         ])
     }
     
-    @objc func presentRulesVC() {
-        present(RulesVC(), animated: true)
-    }
+   
 }
+    
